@@ -1,0 +1,17 @@
+.jumbotron {
+  padding-top: 3rem;
+  background-color: rgb(224, 89, 89);
+  color: aliceblue;
+}
+
+#portofolio {
+  background-color: rgb(224, 89, 89);
+}
+
+#portofolio h2 {
+  color: aliceblue;
+}
+
+section {
+  padding-top: 5rem;
+}
