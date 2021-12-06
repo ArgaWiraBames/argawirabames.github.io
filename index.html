@@ -14,6 +14,9 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>My Portofolio | Arga Wira Bames</title>
   </head>
   <body id="home">
@@ -45,10 +48,10 @@
     <!-- Navbar Close -->
 
     <!-- Jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="img/pas foto.jpg" alt="Arga Wira Bames" width="200" class="rounded-circle img-thumbnail" />
+    <section class="jumbotron text-center" data-aos="fade in">
+      <img src="img/pas foto.jpg" alt="Arga Wira Bames" width="200" class="rounded-circle img-thumbnail" data-aos="flip-right" />
       <h1 class="display-4">Arga Wira Bames</h1>
-      <p class="lead">Web Programer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -68,10 +71,10 @@
           </div>
         </div>
         <div class="row justify-content-center text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum unde architecto, fugiat error numquam, veniam velit recusandae distinctio reiciendis quaerat, amet quis aut soluta quod!</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="2000">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores beatae eaque culpa? Eos enim, magni alias soluta harum a optio molestias, voluptates laborum facilis quidem deserunt neque sint nesciunt dolorum.</p>
           </div>
         </div>
@@ -94,7 +97,7 @@
             <h2>My Portofolio</h2>
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" data-aos="flip-left">
           <div class="col-md-4 mb-3">
             <div class="card">
               <img src="img/portofolio/Portofolio-1.jpg" class="card-img-top" alt="Portofolio-1" />
@@ -227,6 +230,20 @@
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
-    s
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 1.5, delay: 2, text: "Web Programer" });
+      gsap.from(".navbar", { duration: 1, ease: "bounce.out", y: -100 });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+
+      AOS.init({
+        once: true,
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>
